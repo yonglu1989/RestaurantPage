@@ -20,7 +20,7 @@ function generateHeader() {
     homeButton.classList.add("home-button");
     homeButton.innerText = "Home";
 
-    homeLogoContainer.appendChild(logo);
+    // homeLogoContainer.appendChild(logo);
     homeLogoContainer.appendChild(homeButton);
     homeLogoContainer.classList.add('homeLogoContainer');
 
@@ -39,13 +39,14 @@ function generateHeader() {
     header.appendChild(aboutButton);
     headerElement.appendChild(header);
 
-    // Adding the event listeners to tabs.
+    // Event Listeners for tab switching.
     // Event listener for home tab.
     homeLogoContainer.addEventListener('click', () => {
         content.innerHTML = "";
         content.appendChild(generateLandingPage());
     });
 
+    // Event listener for menu tab.
     menuButton.addEventListener('click', ()=> {
         content.innerHTML = "";
         content.appendChild(generateMenu());
@@ -71,4 +72,3 @@ function generateLandingPage() {
 document.body.appendChild(generateHeader());
 content.appendChild(generateLandingPage());
 
-// Event Listeners for tab switching.
